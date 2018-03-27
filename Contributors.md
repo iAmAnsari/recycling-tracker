@@ -2,3 +2,5 @@
 -[@merunur](https://github.com/merunur)
 -[@waqar3](https://github.com/waqar3)
 -[@iAmAnsari](https://github.com/iAmAnsari)
+-[@tanmaylata](https://github.com/tanmaylata)
+-[@lamngue](https://github.com/lamngue)
