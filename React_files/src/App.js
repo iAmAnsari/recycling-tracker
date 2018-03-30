@@ -1,21 +1,41 @@
 import React, { Component } from 'react';
 import './App.css';
 import Card from './Card.js';
+import ResultBox from './ResultBox.js'
+
 
 class App extends Component {
+
+  constructor(){
+    super();
+    this.state={
+           waste: '',
+           weight: '',
+        };
+  }
+
+  onWasteChange= (event) => {
+    this.setState({waste: event.target.value});
+  }
+
+  onWeightChange= (event) => {
+    this.setState({weight: event.target.value});
+  }
+
   render() {
     return (
-      <div className="App">
+      <div className='App'>
         <header className="App-header">
           <section>
-             <span class="trash">
+             <span className="trash">
                <span></span>
                 <i></i>
              </span>
           </section>
           <h1 className="f1 App-title">Welcome to Recycling Tracker</h1>
         </header>
-         <Card/>
+         <Card onWaste={this.onWasteChange} onWeight={this.onWeightChange} />
+         <ResultBox waste={this.state.waste} weight={this.state.weight} />
       </div>
     );
   }
